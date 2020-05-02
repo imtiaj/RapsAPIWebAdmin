@@ -22,6 +22,7 @@ namespace BLL.Services
         Task<bool> IsMobileNumberAlreadyExist(string mobilenumber);
     }
 
+    
     public class EmployeeBasicInfoService : IEmployeeBasicInfoService
     {
         private readonly IEmpBasicInfoRepository _empBasicInfoRepository;
@@ -125,20 +126,20 @@ namespace BLL.Services
             aEmpInfo.Gender = request.Gender;
             aEmpInfo.Email = request.Email;
 
-            //if (!string.IsNullOrWhiteSpace(request.Email))
-            //{
-            //    var isEmailExistInOtherEmpInfo = await _empBasicInfoRepository.GetAAsync(
-            //                                        emp => emp.Email == request.Email
-            //                                        && emp.EmployeeID != aEmpInfo.EmployeeID);
-            //    if (isEmailExistInOtherEmpInfo == null)
-            //    {
-            //        aEmpInfo.Email = request.Email;
-            //    }
-            //    else
-            //    {
-            //        throw new RapsAppException("Email already exist in another employees info.");
-            //    }
-            //}
+            if (!string.IsNullOrWhiteSpace(request.Email))
+            {
+                var isEmailExistInOtherEmpInfo = await _empBasicInfoRepository.GetAAsync(
+                                                    emp => emp.Email == request.Email
+                                                    && emp.EmployeeID != aEmpInfo.EmployeeID);
+                if (isEmailExistInOtherEmpInfo == null)
+                {
+                    aEmpInfo.Email = request.Email;
+                }
+                else
+                {
+                    throw new RapsAppException("Email already exist in another employees info.");
+                }
+            }
 
             if (!string.IsNullOrWhiteSpace(request.MobileNumber))
             {

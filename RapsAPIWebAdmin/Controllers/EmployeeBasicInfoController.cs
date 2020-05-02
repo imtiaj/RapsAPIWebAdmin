@@ -8,9 +8,11 @@ using DLL.Models;
 using DLL.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace RapsAPIWebAdmin.Controllers
-{    
+{
+    [JsonObject(IsReference = true)]
     public class EmployeeBasicInfoController : ApplicationBaseController
     {
         private readonly IEmployeeBasicInfoService _employeeBasicInfoService;
@@ -39,15 +41,15 @@ namespace RapsAPIWebAdmin.Controllers
         }
 
         [HttpPut("{email}")]
-        public ActionResult UpdateEmployeeBasicProfile(string email, EmployeeBasicInfoUpdateRequest aEmployeeBasicInfos)
+        public async Task<ActionResult> UpdateEmployeeBasicProfile(string email, EmployeeBasicInfoUpdateRequest aEmployeeBasicInfos)
         {
-            return Ok(_employeeBasicInfoService.UpdateEmployeeBasicProfile(email, aEmployeeBasicInfos));
+            return Ok(await _employeeBasicInfoService.UpdateEmployeeBasicProfile(email, aEmployeeBasicInfos));
         }
 
         [HttpDelete("{email}")]
-        public ActionResult DeleteEmployeeBasicProfile(string email)
+        public async Task<ActionResult> DeleteEmployeeBasicProfile(string email)
         {
-            return Ok(_employeeBasicInfoService.DeleteEmployeeAsync(email));
+            return Ok(await _employeeBasicInfoService.DeleteEmployeeAsync(email));
         }
     }
 }
