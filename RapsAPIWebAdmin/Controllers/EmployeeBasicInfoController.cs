@@ -12,7 +12,6 @@ using Newtonsoft.Json;
 
 namespace RapsAPIWebAdmin.Controllers
 {
-    [JsonObject(IsReference = true)]
     public class EmployeeBasicInfoController : ApplicationBaseController
     {
         private readonly IEmployeeBasicInfoService _employeeBasicInfoService;
