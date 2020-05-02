@@ -1,0 +1,12 @@
+D:\Project\RapsAPIWebAdmin\DLL\bin\Debug\netcoreapp3.1\DLL.deps.json
+D:\Project\RapsAPIWebAdmin\DLL\bin\Debug\netcoreapp3.1\DLL.runtimeconfig.json
+D:\Project\RapsAPIWebAdmin\DLL\bin\Debug\netcoreapp3.1\DLL.runtimeconfig.dev.json
+D:\Project\RapsAPIWebAdmin\DLL\bin\Debug\netcoreapp3.1\DLL.dll
+D:\Project\RapsAPIWebAdmin\DLL\bin\Debug\netcoreapp3.1\DLL.pdb
+D:\Project\RapsAPIWebAdmin\DLL\obj\Debug\netcoreapp3.1\DLL.csproj.CoreCompileInputs.cache
+D:\Project\RapsAPIWebAdmin\DLL\obj\Debug\netcoreapp3.1\DLL.AssemblyInfoInputs.cache
+D:\Project\RapsAPIWebAdmin\DLL\obj\Debug\netcoreapp3.1\DLL.AssemblyInfo.cs
+D:\Project\RapsAPIWebAdmin\DLL\obj\Debug\netcoreapp3.1\DLL.dll
+D:\Project\RapsAPIWebAdmin\DLL\obj\Debug\netcoreapp3.1\DLL.pdb
+D:\Project\RapsAPIWebAdmin\DLL\obj\Debug\netcoreapp3.1\DLL.genruntimeconfig.cache
+D:\Project\RapsAPIWebAdmin\DLL\obj\Debug\netcoreapp3.1\DLL.csprojAssemblyReference.cache
